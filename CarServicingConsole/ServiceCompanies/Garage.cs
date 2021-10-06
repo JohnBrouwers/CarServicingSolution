@@ -1,4 +1,5 @@
-﻿using CarServicingConsole.Vehicles;
+﻿using CarServicingConsole.ServiceCompanies;
+using CarServicingConsole.Vehicles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,8 +15,13 @@ namespace CarServicingConsole.Services
             car.Maintenance.Register("Spark plugs replaced");
             car.Maintenance.Register("Engine oil refreshed");
 
+            WindowService(car);
+
             car.Maintenance.Register("Interior cleaned");
             car.Maintenance.Register("Washed and polished");
         }
+
+        public CarService WindowService { get; set; }
+
     }
 }

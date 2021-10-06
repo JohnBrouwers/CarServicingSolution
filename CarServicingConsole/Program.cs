@@ -21,6 +21,8 @@ namespace CarServicingConsole
             var garage = new Garage();
 
             var windowService = new CarGlass();
+            garage.WindowService = windowService.PerformService;
+
 
             garage.PerformMaintenance(car);
 
